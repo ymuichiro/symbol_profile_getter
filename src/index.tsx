@@ -1,9 +1,8 @@
-import "./shim";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+if (typeof Buffer === 'undefined') global.Buffer = require('buffer').Buffer;
 
 
 const root = ReactDOM.createRoot(
