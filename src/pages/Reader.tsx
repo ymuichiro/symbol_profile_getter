@@ -5,7 +5,7 @@ import { QrCodeReader } from "../components/QrCodeReader";
 import { useRecoilState } from "recoil";
 import { AccountStore, MyAccountStore } from "../store/Account";
 import Node from "../infrastructure/node";
-import { NetworkType, PublicAccount } from "symbol-sdk";
+import { NetworkType } from "symbol-sdk";
 import { SystemError } from "../infrastructure/error";
 import CircularProgress from "@mui/material/CircularProgress/CircularProgress";
 import Typography from "@mui/material/Typography/Typography";
@@ -108,6 +108,9 @@ export function Reader(): JSX.Element {
           </div>
           :
           <Grid container direction="row" spacing={3} style={{ marginTop: "10px" }}>
+            <Grid item xs={12}>
+              <Typography variant="h4" align="center">委任チェッカー</Typography>
+            </Grid>
             <Grid item xs={12}>
               <Card style={{ height: "100%" }}>
                 <CardHeader title={"あなたの情報"} style={{ textAlign: "center" }} />

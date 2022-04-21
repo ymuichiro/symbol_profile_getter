@@ -1,14 +1,11 @@
 import AppBar from "@mui/material/AppBar/AppBar";
 import Toolbar from "@mui/material/Toolbar/Toolbar";
-import Typography from "@mui/material/Typography/Typography";
-
+import logo from "../static/logo_width.png";
 
 export function Header(): JSX.Element {
   return <AppBar position="static">
-    <Toolbar>
-      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-        Reader
-      </Typography>
+    <Toolbar style={{ display: "flex", justifyContent: "center" }}>
+      <img src={logo} className="App-logo" alt="logo" height={"50px"} />
     </Toolbar>
   </AppBar>;
 }
